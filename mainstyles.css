@@ -1,0 +1,192 @@
+body {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vw;
+    display: block;
+    position: absolute;
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    position: relative;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.background {
+    position: absolute;
+    display: block;
+    z-index: 0;
+}
+
+#video {
+    position: absolute;
+    min-height: 100vh;
+    min-width: 100vw;
+    left: 50vw; /* % of surrounding element */
+    top: 50vh;
+    transform: translate(-50%, -50%); /* % of current element */
+}
+
+.titlecont {
+    z-index: 10;
+    position: absolute;
+    display: block;
+    width: 100vw;
+    height: 50vh;
+    top: 38.5vh;
+}
+
+.title {
+    font-family: "Louis George Cafe";
+    font-size: 8rem;
+    display: block;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    text-shadow: #344feb 0px 0px 1px,   #0082a6 0px 0px 1px,   #344feb 0px 0px 1px,
+             #0082a6 0px 0px 1px,   #344feb 0px 0px 1px,   #0082a6 0px 0px 1px;
+}
+
+.buttons {
+    width: 100vw;
+    height: auto;
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+.buttonebox {
+    width: 10rem;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+}
+
+.buttone {
+    font-family: "Kiona";
+    font-size: 1rem;
+    color: #fff;
+    padding: 1rem;
+    text-decoration: none;
+    text-shadow: 0 0 0.1em #000;
+    -o-transition:.25s;
+    -ms-transition:.25s;
+    -moz-transition:.25s;
+    -webkit-transition:.25s;
+    transition:.25s ease-in-out;
+}
+
+.buttone:hover {
+    color: #0082a6;
+}
+
+.buttone::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    bottom: 0;
+    left: 25%;
+    background-color: #0082a6;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.buttone:hover::after {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.fullscreen {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: #00000031;
+}
+
+.fullcont {
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 50%;
+    left: 51%; /* cuz the version shifts it a bit and triggers ocd */
+    text-align: center;
+    transform: translateY(-50%) translateX(-50%);
+    z-index: 102;
+}
+
+.fulltitle {
+    font-family: "Louis George Cafe";
+    font-size: 7rem;
+    display: block;
+    position: relative;
+    color: #fff;
+    text-shadow: #344feb 0px 0px 1px,   #0082a6 0px 0px 1px,   #344feb 0px 0px 1px,
+    #0082a6 0px 0px 1px,   #344feb 0px 0px 1px,   #0082a6 0px 0px 1px;
+}
+
+.fulltitlever {
+    font-family: "Louis George Cafe";
+    font-size: 1rem;
+    display: inline-block;
+    position: relative;
+    color: #fff;
+    bottom: 3rem;
+    left: 0.4rem;
+}
+
+.fulllinkbox {
+    width: auto;
+    position: relative;
+    text-align: center;
+}
+
+.fulllink {
+    font-family: "Kiona";
+    font-size: 2rem;
+    color: #fff;
+    position: relative;
+    text-shadow: #000 0px 0px 0.1rem;
+    width: auto;
+    text-decoration: none;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s ease-in-out;
+}
+
+.fulllink:hover {
+    color: #0082a6;
+    -o-transition:.25s;
+    -ms-transition:.25s;
+    -moz-transition:.25s;
+    -webkit-transition:.25s;
+    transition:.25s ease-in-out;
+}
+
+.backButton {
+    width: 100vw;
+    height: 100vh;
+    z-index: 101;
+    background-color: transparent;
+    opacity: 0;
+}
+
+.footer {
+    font-family: "Louis George Cafe";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 1rem;
+    color:rgba(255, 255, 255, 0.4);
+}

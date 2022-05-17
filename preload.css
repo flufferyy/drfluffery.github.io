@@ -1,0 +1,90 @@
+.loader {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-image: radial-gradient(circle at 0% 100%, #211e46, #101850);
+    z-index: 1000;
+    opacity: 1;
+}
+
+.wrapper {
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    top: 50%;
+    left: 50%;
+    z-index: 1001;
+    margin: 0;
+}
+.circlebg {
+    position: absolute;
+    border-right: 1px solid #aaa;
+    border-left: 1px solid #aaa;
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    left: 50%;
+    top: 50%;
+    margin-left: -5.25rem;
+    margin-top: -5rem;
+    opacity: 0.5;
+}
+.circlecont {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+.circle {
+    position: absolute;
+    border-right: 2px solid #bbb;
+    border-radius: 50%;
+    width: 10.05rem;
+    height: 10.05rem;
+    left: 50%;
+    top: 50%;
+    margin-left: -5.25rem;
+    margin-top: -5rem;
+    clip: rect(5rem, 11rem, 10rem, 0);
+    animation: spin linear infinite 2s running;
+}
+.loaderTextCont {
+    position: absolute;
+    margin: 0;
+    text-align: center;
+    top: calc(50vh - 0.5rem);
+    width: 100vw;
+    height: auto;
+}
+.loaderText {
+  color: #ccc;
+    position: relative;
+    font-family: "Caviar Dreams";
+    text-align: center;
+    font-size: 1rem;
+}
+@keyframes spin {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+}
+@keyframes closeLoader {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+@keyframes closeLoaderBg {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
